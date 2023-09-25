@@ -41,9 +41,11 @@ class LoginPage {
   get switch() {
     return $("~switch");
   }
+  
   get switchText() {
     return $("~switch-text");
   }
+
   get dropdownArrow() {
     return $("//XCUIElementTypeTextField[@value='Select an item...']");
   }
