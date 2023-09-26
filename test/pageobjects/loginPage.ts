@@ -2,6 +2,14 @@ class LoginPage {
   /**
    * define selectors using getter methods
    */
+  static values: string[] = [
+    "webdriver.io is awesome",
+    "Appium is awesome",
+    "This app is awesome",
+  ];
+  static randomValue =
+    LoginPage.values[Math.floor(Math.random() * LoginPage.values.length)];
+  static text: string = "Princyy";
   get clickOnLogin() {
     return $('//XCUIElementTypeButton[@name="Login"]');
   }
@@ -34,23 +42,34 @@ class LoginPage {
     return $("~text-input");
   }
 
-  youHaveTyped(text: string) {
-    return $(`~Input field: You have typed: ${text}`);
+  youHaveTyped() {
+    return $(`~Input field: You have typed: ${LoginPage.text}`);
   }
 
   get switch() {
     return $("~switch");
   }
-  
+
   get switchText() {
     return $("~switch-text");
   }
 
-  get dropdownArrow() {
-    return $("//XCUIElementTypeTextField[@value='Select an item...']");
+  get dropdownValues() {
+    return $("XCUIElementTypePickerWheel");
+  }
+  get clickOnDropdown() {
+    return $("//XCUIElementTypeTextField[@name='text_input']");
   }
 
+  assertDropdown() {
+    return $(`//XCUIElementTypeTextField[@value='${LoginPage.randomValue}']`);
+  }
+  get clickOnDone() {
+    return $("//XCUIElementTypeOther[@label='Done' and @accessible='true']");
+  }
+  get activeBtn() {
+    return $("//XCUIElementTypeOther[@name='Active']");
+  }
 }
 
-
-export default new LoginPage();
+export default LoginPage;
