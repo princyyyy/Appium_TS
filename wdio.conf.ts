@@ -14,7 +14,7 @@ export const config: Options.Testrunner = {
   //     }
   // },
 
-  port: 4723,
+  port: 1230,
   //
   // ==================
   // Specify Test Files
@@ -58,13 +58,14 @@ export const config: Options.Testrunner = {
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
   // https://saucelabs.com/platform/platform-configurator
   //
+
   capabilities: [
     {
       // capabilities for local Appium web tests on iOS
       platformName: "iOS",
       "appium:deviceName": "iPhone SE (3rd generation)",
       "appium:platformVersion": "16.4",
-      "appium:automationName": "XCUITest",
+      "appium:automationName": "XCuiTest",
       "appium:noReset": true,
       "appium:app":
         "/Users/princy/Documents/Appium-Typescript/application/wdioNativeDemoApp.app",
