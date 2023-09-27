@@ -1,6 +1,4 @@
 import LoginPagee from "../pageobjects/loginPage.ts";
-
-const LoginPage = new LoginPagee();
 class TestHelpers {
   async waitForElementToDisplayed(
     element: WebdriverIO.Element,

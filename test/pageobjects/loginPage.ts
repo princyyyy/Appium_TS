@@ -106,6 +106,9 @@ class LoginPage {
 
     return droppable;
   }
+  get biomatric() {
+    return $('//XCUIElementTypeOther[@name="󰈷"]');
+  }
 }
 
 export default LoginPage;

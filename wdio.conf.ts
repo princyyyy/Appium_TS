@@ -67,6 +67,8 @@ export const config: Options.Testrunner = {
       "appium:platformVersion": "16.4",
       "appium:automationName": "XCuiTest",
       "appium:noReset": true,
+      "appium:networkConnectionEnabled": true,
+      "appium:allowTouchIdEnroll": true, // Enable network connection using Appium capability
       "appium:app":
         "/Users/princy/Documents/Appium-Typescript/application/wdioNativeDemoApp.app",
     },
